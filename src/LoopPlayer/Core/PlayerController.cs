@@ -156,13 +156,13 @@ public sealed class PlayerController : IDisposable
     }
 
     /// <summary>
-    /// Выход из цикла: фрагмент становится всем треком (A = 0, B = длительность).
+    /// Выход из цикла: B = длительность, A остаётся на месте.
     /// Границы применяются к аудиопотоку сразу, а позиция не меняется — воспроизведение
     /// продолжается за прежнюю точку B до конца записи.
     /// </summary>
     public void ExitLoop()
     {
-        if (HasTrack) WithoutJumpToA(Range.ResetToFull);
+        if (HasTrack) WithoutJumpToA(Range.ReleaseB);
     }
 
     /// <summary>

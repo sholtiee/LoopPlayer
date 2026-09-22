@@ -120,7 +120,7 @@
             <Button x:Name="ResetCounterButton" Content="Сбросить" Margin="12,0,0,0" Click="ResetCounterButton_Click"
                     ToolTip="Обнулить счётчик повторений (R)"/>
             <Button x:Name="ExitLoopButton" Content="Выйти из цикла" Margin="12,0,0,0" Click="ExitLoopButton_Click"
-                    ToolTip="A = 0:00, B = конец трека; воспроизведение сразу продолжается до конца записи (Esc)"/>
+                    ToolTip="B = конец трека, A остаётся; воспроизведение сразу продолжается до конца записи (Esc)"/>
         </StackPanel>
 
         <!-- Статус / ошибки -->

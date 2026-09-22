@@ -33,8 +33,8 @@ public sealed class AbRange
         Apply(a, b);
     }
 
-    /// <summary>Выход из цикла: A = 0, B = длительность (с уведомлением подписчиков).</summary>
-    public void ResetToFull() => Apply(0, Duration);
+    /// <summary>Выход из цикла: B = длительность, A остаётся на месте.</summary>
+    public void ReleaseB() => Apply(A, Duration);
 
     /// <summary>Кнопка/клавиша A: A = позиция; если она правее B — B подтягивается к A.</summary>
     public void SetAFromPosition(double position)
