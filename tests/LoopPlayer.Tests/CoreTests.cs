@@ -93,6 +93,17 @@ public class AbRangeTests
     }
 
     [Fact]
+    public void ReleaseBKeepsAAndOpensToEnd()
+    {
+        var r = Make();
+        r.SetAFromPosition(10);
+        r.SetBFromPosition(15);
+        r.ReleaseB();
+        Assert.Equal(10, r.A);
+        Assert.Equal(100, r.B);
+    }
+
+    [Fact]
     public void NudgeUsesFractionalSteps()
     {
         var r = Make();
